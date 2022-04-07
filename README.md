@@ -7,7 +7,7 @@ I didn't find any software to easily remove CCs from subtitles, so I wrote my ow
 
 Made with Python 3.10.0 and tested only in Windows. It will perhaps run on other systems as well. If not, send me a message or a pull request and we can sort it out. :)
 
-Usage of this program is hopefully self-explanatory.
+Usage of this program is hopefully pretty straight-forward. Open a single file or place multiple files in the "input" folder inside this program folder. "Cleaned" files will appear in the "output" folder.
 
 ![screenshot](https://github.com/Byproduct/srt_cc_remover/blob/main/screenshots/ccremover1.png)
 
