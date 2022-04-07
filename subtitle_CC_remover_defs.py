@@ -100,7 +100,10 @@ def clean_single_file(input_file):
             try:
                 f = open(output_file, "w")
                 for line in rebuilt_text:
-                    f.write(line + "\n")
+                    if "\n" in line:
+                        f.write(line)
+                    if "\n" not in line:
+                        f.write(line + "\n")
                 f.close()
                 report = report + "\nNew file written in output folder."
                 report = report + "\nDetected and cleaned " + str(len(CClines)) + " CC lines:\n\n"
@@ -128,7 +131,10 @@ def clean_multiple_files(input_files):
                     output_file = 'output/' + os.path.basename(filename)
                     f = open(output_file, "w")
                     for line in rebuilt_text:
-                        f.write(line + "\n")
+                        if "\n" in line:
+                            f.write(line)
+                        if "\n" not in line:
+                            f.write(line + "\n")
                     f.close()
                 except:
                     report = report + "\nUnable to write output file " + output_file
