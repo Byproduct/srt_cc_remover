@@ -1,0 +1,1 @@
+This file is not necessary and you may remove it. (Github doesn't allow including blank folders, so I had to write something.)
