@@ -9,11 +9,14 @@ Made with Python 3.10.0 and tested only in Windows. It will perhaps run on other
 
 Usage of this program is hopefully pretty straight-forward. Open a single file or place multiple files in the "input" folder inside this program folder. "Cleaned" files will appear in the "output" folder.
 
+
 ![screenshot](https://github.com/Byproduct/srt_cc_remover/blob/main/screenshots/ccremover1.png)
 Main screen
 
+
 ![screenshot](https://github.com/Byproduct/srt_cc_remover/blob/main/screenshots/ccremover2.png)
 Cleaning one file
+
 
 ![screenshot](https://github.com/Byproduct/srt_cc_remover/blob/main/screenshots/ccremover3.png)
 Cleaning a folder
