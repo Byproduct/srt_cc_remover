@@ -1,5 +1,4 @@
 import os
-import re
 
 
 # list all files in the input directory that have the .srt extension (case insensitive)
