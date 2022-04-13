@@ -1,5 +1,4 @@
 import os
-from os import walk
 import re
 
 
@@ -8,7 +7,7 @@ def list_input_directory():
 
 #    Old solution (in case the one-line solution doesn't work for some reason)
 #    allfiles = []
-#    for (dirpath, dirnames, filenames) in walk('input'):
+#    for (dirpath, dirnames, filenames) in os.walk('input'):
 #        allfiles.extend(filenames)
 #        break
 #    srtfiles = []
@@ -17,8 +16,7 @@ def list_input_directory():
 #        if file_extension == ".srt":
 #            srtfiles.append(filename)
 
-    srtfiles = [x for x in os.listdir('input') if x.lower().endswith('.srt')]
-    return srtfiles
+    return [x for x in os.listdir('input') if x.lower().endswith('.srt')]
 
 
 # remove CC lines from a file, returning tuple: a new file and removed CCs
@@ -29,18 +27,11 @@ def remove_cc_lines(input_file):
     try:
         with open(input_file) as f:
             for line in f:
-                CCline = False
                 line = line.rstrip()
-                if len(line) > 2 and line[0] == "[" and line[-1] == "]":
+                if len(line) > 2 and line.startswith(("[", "(")) and line.endswith(("]", ")")):
                     CClines.append(line)
-                    CCline = True
-                elif len(line) > 2 and line[0] == "(" and line[-1] == ")":
-                    CClines.append(line)
-                    CCline = True
-
-                if not CCline:
+                else:
                     cleaned_text.append(line)
-
     except:
         pass
 
