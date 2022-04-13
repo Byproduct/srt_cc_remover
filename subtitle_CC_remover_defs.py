@@ -3,18 +3,6 @@ import os
 
 # list all files in the input directory that have the .srt extension (case insensitive)
 def list_input_directory():
-
-#    Old solution (in case the one-line solution doesn't work for some reason)
-#    allfiles = []
-#    for (dirpath, dirnames, filenames) in os.walk('input'):
-#        allfiles.extend(filenames)
-#        break
-#    srtfiles = []
-#    for filename in allfiles:
-#        file_extension = filename[-4:].lower()
-#        if file_extension == ".srt":
-#            srtfiles.append(filename)
-
     return [x for x in os.listdir('input') if x.lower().endswith('.srt')]
 
 
